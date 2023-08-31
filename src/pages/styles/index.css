@@ -1,6 +1,9 @@
+@import url(../../vendor/fonts.css);
+
 .body {
   margin: 0;
   background-color: #0C0807;
+  font-family: 'Finlandica', Helvetica, sans-serif;
 }
 
 .logo {
@@ -81,7 +84,7 @@
 }
 .header__submit {
   background-color: transparent;
-  background-image: url(../../images/search-icon.svg);
+  background-image: url(../../images/icons/search-icon.svg);
   background-size: 100% 100%;
   width: 20px;
   height: 20px;
@@ -107,7 +110,7 @@
 }
 .header__nav-list:last-of-type > .header__nav-list-link::after {
   content: '';
-  background-image: url(../../images/arrow-icon.svg);
+  background-image: url(../../images/icons/arrow-icon.svg);
   background-size: 100% 100%;
   width: 10px;
   height: 10px;
@@ -124,11 +127,192 @@
   height: 27px;
 }
 .header__social-list-link_type_facebook {
-  background-image: url(../../images/facebook-icon.svg);
+  background-image: url(../../images/icons/facebook-icon.svg);
 }
 .header__social-list-link_type_instagram {
-  background-image: url(../../images/instagram-icon.svg);
+  background-image: url(../../images/icons/instagram-icon.svg);
 }
 .header__social-list-link_type_twitter {
-  background-image: url(../../images/twitter-icon.svg);
+  background-image: url(../../images/icons/twitter-icon.svg);
+}
+
+
+.description {
+  padding: 88px 0 99px 16px;
+  display: flex;
+}
+.description__card-desc {
+  color: #fff;
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+.card {
+  background-color: #fff;
+  max-width: 243px;
+  height: 502px;
+  padding: 12px 12px 17px 12px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__img {
+  width: 219px;
+  height: 215px;
+  display: block;
+}
+.card__title {
+  max-width: 210px;
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 20px;
+  margin: 14px 0 0 0;
+}
+.card__price {
+  font-weight: 700;
+  line-height: 42px;
+  font-size: 32px;
+  margin: 12px 0 0 0;
+}
+.card__btn {
+  border: 2px solid #000;
+  background-color: #F3848A;
+  border-radius: 100px;
+  width: 169px;
+  height: 45px;
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 20px;
+  color: #222236;
+  margin-top: 22px;
+  padding: 0;
+  cursor: pointer;
+}
+.card__lists {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-grow: 1;
+  gap: 12px;
+}
+.card__list {
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  width: 51px;
+  height: 44px;
+  padding: 6px 0;
+  box-sizing: border-box;
+}
+.card__time-number {
+  font-weight: 500;
+  line-height: 21px;
+  font-size: 18px;
+  margin: 0;
+}
+.card__time-name {
+  font-weight: 400;
+  line-height: 12px;
+  font-size: 10px;
+  margin: 0;
+}
+.description__box-text {
+  margin-top: 57px;
+  margin-left: 38px;
+}
+.description__title {
+  font-weight: 500;
+  line-height: 64px;
+  font-size: 52px;
+  margin: 0;
+  color: #fff;
+  max-width: 510px;
+}
+.description__title-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(120deg, #0B88D9 10%,
+  #4CDE55 17%, #FAE620 25%, #F95A63 45%,
+  #0B88D9, #4CDE55, #FAE620);
+}
+.description__subtitle {
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 15px 0 0 0;
+  max-width: 526px;
+  color: #fff;
+}
+.description__box-btn {
+  margin-top: 49px;
+  display: flex;
+  gap: 19px;
+}
+.description__btn {
+  width: 185px;
+  height: 49px;
+  border: 2px solid #fff;
+  padding: 0;
+  border-radius: 100px;
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+}
+.description__btn_type_yellow {
+  background-color: #FAE620;
+  color: #000;
+}
+.description__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+  grid-template-rows: repeat(2, minmax(min-content, max-content));
+  row-gap: 25px;
+  column-gap: 34px;
+  color: #fff;
+  margin-top: 29px;
+  margin-left: 63px;
+}
+.description__card {
+  width: 228px;
+  height: 196px;
+  border: 5px solid transparent;
+  border-radius: 11px;
+  box-sizing: border-box;
+}
+.description__card_type_dall-e {
+  background-image: url();
+  border-color: rgba(250, 230, 32, .4);
+}
+.description__card_type_midjourney {
+  background-image: url();
+  border-color: rgba(76, 222, 85, 0.4);
+}
+.description__card_type_gpt {
+  background-image: url();
+  border-color: rgba(243, 132, 138, .4);
+}
+.description__card_type_stable-diff {
+  background-image: url();
+  border-color: rgba(11, 136, 217, 0.4);
+}
+.description__technology {
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, .8);
+  margin: 0;
+}
+.description__name {
+  font-weight: 500;
+  line-height: 21px;
+  font-size: 18px;
+  margin: 0;
 }

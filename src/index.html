@@ -15,7 +15,7 @@
     </div>
     <div class="header__box-nav-search">
       <form class="header__form-search" method="post">
-        <input type="text" name="search" class="header__field" placeholder="Search Prompts...">
+        <input type="text" name="search" required class="header__field" placeholder="Search Prompts...">
         <div class="header__box-submit">
           <button type="submit" class="header__submit"></button>
         </div>
@@ -52,5 +52,62 @@
       </li>
     </ul>
   </header>
+  <main class="content">
+    <section class="description">
+      <div class="description__card-box">
+        <p class="description__card-desc">Free prompt of the week</p>
+        <article class="card">
+          <img src="./images/description-section/description-img.jpg" alt="Prompt" class="card__img">
+          <h4 class="card__title">Kaleidoscope Artistic Tiles</h4>
+          <p class="card__price">&dollar;2.99</p>
+          <button type="button" class="card__btn">Buy Now</button>
+          <ul class="card__lists lists">
+            <li class="card__list">
+              <p class="card__time-number">22</p>
+              <p class="card__time-name">Hours</p>
+            </li>
+            <li class="card__list">
+              <p class="card__time-number">58</p>
+              <p class="card__time-name">Min</p>
+            </li>
+            <li class="card__list">
+              <p class="card__time-number">16</p>
+              <p class="card__time-name">Sec</p>
+            </li>
+          </ul>
+        </article>
+      </div>
+      <div class="description__box-text">
+        <h1 class="description__title">
+          DALL·E, GPT-3, Midjourney, Stable Diffusion, <span class="description__title-gradient">ChatGPT Prompt Marketplace</span>
+        </h1>
+        <p class="description__subtitle">
+          Find top prompts, produce better results, save on API costs, sell your own prompts.
+        </p>
+        <div class="description__box-btn">
+          <button type="button" class="description__btn description__btn_type_yellow">Sell A Prompt</button>
+          <button type="button" class="description__btn">Find a Prompts</button>
+        </div>
+      </div>
+      <ul class="description__cards lists">
+        <li class="description__card description__card_type_dall-e">
+          <p class="description__technology">DALL-E</p>
+          <h4 class="description__name">Beautiful Photorealistic Portraits</h4>
+        </li>
+        <li class="description__card description__card_type_midjourney">
+          <p class="description__technology">Midjourney</p>
+          <h4 class="description__name">Pop Retro American Comic Style</h4>
+        </li>
+        <li class="description__card description__card_type_gpt">
+          <p class="description__technology">GPT-3</p>
+          <h4 class="description__name">Prompts Generators Pro</h4>
+        </li>
+        <li class="description__card description__card_type_stable-diff">
+          <p class="description__technology">Stable Diff.</p>
+          <h4 class="description__name">Beautiful Pixar Girls Cute Avatars</h4>
+        </li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
