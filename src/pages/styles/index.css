@@ -22,6 +22,13 @@
   padding: 0;
   margin: 0;
 }
+.icon::before {
+  content: '';
+  background-size: 100% 100%;
+  width: 14px;
+  height: 14px;
+  display: block;
+}
 
 .header {
   height: 80px;
@@ -270,36 +277,45 @@
   background-color: #FAE620;
   color: #000;
 }
-.description__cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(min-content, max-content));
-  grid-template-rows: repeat(2, minmax(min-content, max-content));
-  row-gap: 25px;
-  column-gap: 34px;
+.description__cards-box {
+  display: flex;
+  gap: 34px;
   color: #fff;
   margin-top: 29px;
   margin-left: 63px;
 }
-.description__card {
+.description__cards-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.description__cards-lists:last-of-type {
+  margin-top: 68px;
+}
+.description__card-list {
   width: 228px;
   height: 196px;
   border: 5px solid transparent;
   border-radius: 11px;
   box-sizing: border-box;
+  padding: 8px 10px 10px;
+  background-color: gray;
+  display: grid;
+  grid-template-rows: repeat(2, minmax(min-content, max-content));
 }
-.description__card_type_dall-e {
+.description__card-list_type_dall-e {
   background-image: url();
   border-color: rgba(250, 230, 32, .4);
 }
-.description__card_type_midjourney {
+.description__card-list_type_midjourney {
   background-image: url();
   border-color: rgba(76, 222, 85, 0.4);
 }
-.description__card_type_gpt {
+.description__card-list_type_gpt {
   background-image: url();
   border-color: rgba(243, 132, 138, .4);
 }
-.description__card_type_stable-diff {
+.description__card-list_type_stable-diff {
   background-image: url();
   border-color: rgba(11, 136, 217, 0.4);
 }
@@ -309,10 +325,92 @@
   font-size: 14px;
   background-color: rgba(0, 0, 0, .8);
   margin: 0;
+  padding: 4px 7px;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dall-e::before {
+  background-image: url(../../images/icons/dall-e-icon.svg);
+}
+.gpt::before {
+  background-image: url(../../images/icons/gpt-icon.svg);
+}
+.midjourney::before {
+  background-image: url(../../images/icons/midjourney-icon.svg);
+}
+.stable-diff::before {
+  background-image: url(../../images/icons/stable-diff-icon.svg);
 }
 .description__name {
   font-weight: 500;
   line-height: 21px;
   font-size: 18px;
   margin: 0;
+  align-self: end;
+  grid-row: 3 / 4;
+}
+
+
+.featured {
+  padding-top: 86px;
+}
+.featured__title {
+  font-weight: 600;
+  line-height: 39px;
+  font-size: 32px;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+.featured__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 37px;
+}
+.featured__lists {
+  display: flex;
+  justify-content: center;
+  gap: 77px;
+}
+.featured__list {
+  background-size: 100% 100%;
+  opacity: .6;
+}
+.featured__list_type_wsj {
+  background-image: url(../../images/featured-section/wsj-logo.svg);
+  width: 84px;
+  height: 41px;
+}
+.featured__list_type_yahoo {
+  background-image: url(../../images/featured-section/yahoo-finance-logo.svg);
+  width: 291px;
+  height: 40px;
+}
+.featured__list_type_financial {
+  background-image: url(../../images/featured-section/ft-logo.svg);
+  width: 393px;
+  height: 31px;
+}
+.featured__list_type_atlantic {
+  background-image: url(../../images/featured-section/atlantic-logo.svg);
+  width: 85px;
+  height: 29px;
+}
+.featured__list_type_fast {
+  background-image: url(../../images/featured-section/fast-company-logo.svg);
+  width: 202px;
+  height: 30px;
+}
+.featured__list_type_wired {
+  background-image: url(../../images/featured-section/wired-logo.svg);
+  width: 150px;
+  height: 30px;
+}
+.featured__list_type_theverge {
+  background-image: url(../../images/featured-section/verge-logo.svg);
+  width: 175px;
+  height: 30px;
 }

@@ -2,10 +2,13 @@
   "name": "prompts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "puxichhh",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
