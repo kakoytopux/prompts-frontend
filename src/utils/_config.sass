@@ -1,0 +1,31 @@
+@mixin flex($align: false, $justify: false, $gap: false, $direction: false)
+  display: flex
+
+  @if $align
+    align-items: $align
+  @if $justify
+    justify-content: $justify
+  @if $gap
+    gap: $gap
+  @if $direction
+    flex-direction: $direction
+
+@mixin font($size: false, $height: false, $weight: false)
+  @if $size
+    font-size: $size
+  @if $height
+    line-height: $height
+  @if $weight
+    font-weight: $weight
+
+@mixin size($width: false, $height: false)
+  @if $width
+    width: $width
+  @if $height
+    height: $height
+
+$white: #fff
+$black: #000
+
+$weight-regular: 400
+$weight-medium: 500
