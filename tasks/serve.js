@@ -9,5 +9,6 @@ module.exports = function serve() {
   });
 
   watch('./src/**/*.sass', parallel('sass')).on('change', browserSync.reload);
-  watch('./src/**/*.html', parallel('html')).on('change', browserSync.reload);
+  watch('./src/*.html', parallel('html')).on('change', browserSync.reload);
+  watch('./src/**/*.js', parallel('js')).on('change', browserSync.reload);
 }

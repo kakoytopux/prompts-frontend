@@ -6,6 +6,7 @@
   <title>Prompts</title>
   <link rel="icon" href="./images/logo.svg">
   <!-- css -->
+  <!-- js -->
 </head>
 <body class="body">
   <div class="background"></div>
@@ -129,6 +130,30 @@
         </ul>
       </div>
     </section>
+    <section class="marketplace">
+      <ul class="marketplace__lists-btn lists">
+        <li class="marketplace__list-btn">
+          <button type="button" class="marketplace__btn btn">Featured Prompts</button>
+        </li>
+        <li class="marketplace__list-btn">
+          <button type="button" class="marketplace__btn btn">Trending Prompts</button>
+        </li>
+        <li class="marketplace__list-btn">
+          <button type="button" class="marketplace__btn btn">Newest Prompts</button>
+        </li>
+      </ul>
+      <ul class="cards lists"></ul>
+    </section>
   </main>
+
+  <template id="card">
+    <li class="cards__card">
+      <p class="cards__technology midjourney icon"></p>
+      <div class="cards__box-text">
+        <p class="cards__name"></p>
+        <p class="cards__price"></p>
+      </div>
+    </li>
+  </template>
 </body>
 </html>

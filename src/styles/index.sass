@@ -1,5 +1,5 @@
-@import ../../vendor/_fonts
-@import ../../utils/_config
+@import ../vendor/_fonts
+@import ../utils/_config
 
 .body
   margin: 0
@@ -22,6 +22,7 @@
   padding: 0
   border: 0
   cursor: pointer
+  background-color: transparent
 
 .logo
   background-image: url(./images/logo.svg)
@@ -94,7 +95,6 @@
   @include size($height: 100%)
 
 .header__submit
-  background-color: transparent
   background-image: url(./images/icons/search-icon.svg)
   background-size: 100% 100%
   @include size($width: 20px, $height: 20px)
@@ -229,7 +229,6 @@
   border-radius: 100px
   @include font($size: 20px, $weight: $weight-medium, $height: 25px)
   color: $white
-  background-color: transparent
 
 .description__btn_type_yellow
   background-color: #FAE620
@@ -348,3 +347,25 @@
 .featured__list_type_theverge
   background-image: url(./images/featured-section/verge-logo.svg)
   @include size($width: 175px, $height: 30px)
+
+
+.marketplace
+  padding-top: 141px
+  @include flex($align: center, $direction: column)
+  
+
+.marketplace__lists-btn
+  padding-bottom: 28px
+  border-bottom: 1px solid #fff
+  width: 945px
+  @include flex($justify: center, $gap: 20px)
+  
+
+.marketplace__btn
+  @include size($width: 234px, $height: 63px)
+  color: $white
+  border: 1px solid rgba(255, 255, 255, .2)
+  @include font($size: 20px, $height: 25px, $weight: $weight-medium)
+  border-radius: 9px
+  
+  
