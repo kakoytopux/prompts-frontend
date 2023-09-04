@@ -368,4 +368,19 @@
   @include font($size: 20px, $height: 25px, $weight: $weight-medium)
   border-radius: 9px
   
+
+.cards
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(267px, max-content))
+  width: 1144px
+  row-gap: 31px
+  column-gap: 24px
+  justify-content: center
+  margin-top: 61px
+
+.cards__card
+  @include size($width: 267px, $height: 242px)
+  border: 2px solid rgba(255, 255, 255, .3)
+  border-radius: 8px
+  
   
