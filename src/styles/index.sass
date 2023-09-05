@@ -279,6 +279,7 @@
   padding: 4px 7px
   justify-self: end
   @include flex($align: center, $gap: 6px)
+  border-radius: 4px
 
 .dall-e::before
   background-image: url(./images/icons/dall-e-icon.svg)
@@ -367,6 +368,10 @@
   border: 1px solid rgba(255, 255, 255, .2)
   @include font($size: 20px, $height: 25px, $weight: $weight-medium)
   border-radius: 9px
+
+.marketplace__btn_active
+  background-color: #4CDE55
+  color: $black
   
 
 .cards
@@ -382,5 +387,66 @@
   @include size($width: 267px, $height: 242px)
   border: 2px solid rgba(255, 255, 255, .3)
   border-radius: 8px
+  padding: 14px 14px 17px
+  box-sizing: border-box
+  @include flex($direction: column, $justify: space-between)
   
   
+.cards__technology
+  @include flex($align: center, $gap: 6px)
+  align-self: flex-end
+  margin: 0
+  background-color: #fff
+  padding: 5px 9px
+  border-radius: 5px
+  @include font($size: 14px, $height: 17px, $weight: $weight-medium)
+  
+.cards__box-text
+  @include flex($justify: space-between)
+  
+.cards__name
+  max-width: 150px
+  color: $white
+  margin: 0
+  @include font($size: 16px, $height: 19px, $weight: $weight-regular)
+  
+
+.cards__price
+  margin: 0
+  color: $white
+  @include font($size: 20px, $height: 23px, $weight: $weight-medium)
+
+.marketplace__browse-btn
+  border: 2px solid #fff
+  border-radius: 100px
+  background-color: #FAE620
+  @include size($width: 251px, $height: 59px)
+  @include font($size: 20px, $height: 25px, $weight: $weight-medium)
+  color: #222236
+  margin-top: 73px
+
+
+
+.what-prompts
+  background-color: rgba(11, 136, 217, .5)
+  padding: 64px 0
+  @include flex($direction: column, $align: center)
+  margin-top: 136px
+
+.what-prompts__title
+  color: $white
+  @include font($size: 40px, $height: 49px, $weight: $weight-medium)
+  margin: 0
+
+.what-prompts__desc
+  margin: 11px 0 0 0
+  color: $white
+  @include font($size: 16px, $height: 20px, $weight: $weight-regular)
+  max-width: 743px
+  text-align: center
+
+.what-prompts__desc:first-of-type
+  margin-top: 21px
+
+
+

@@ -31,7 +31,7 @@ export const arrCardsMarketplace = [
   },
   {
     tech: 'Midjourney',
-    name: 'Food Advertising Photography',
+    name: 'Cartoon Backgrounds',
     price: '$5.99',
   },
   {
