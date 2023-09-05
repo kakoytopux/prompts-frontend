@@ -116,22 +116,22 @@
   background-size: 100% 100%
   @include size($width: 10px, $height: 10px)
 
-.header__social-lists
+.social-lists
   @include flex($gap: 25px)
   margin-left: 37px
 
-.header__social-list-link
+.social-list-link
   display: block
   background-size: 100% 100%
   @include size($width: 27px, $height: 27px)
 
-.header__social-list-link_type_facebook
+.social-list-link_type_facebook
   background-image: url(./images/icons/facebook-icon.svg)
 
-.header__social-list-link_type_instagram
+.social-list-link_type_instagram
   background-image: url(./images/icons/instagram-icon.svg)
 
-.header__social-list-link_type_twitter
+.social-list-link_type_twitter
   background-image: url(./images/icons/twitter-icon.svg)
 
 
@@ -449,4 +449,33 @@
   margin-top: 21px
 
 
+.footer
+  padding-top: 35px
+  padding-bottom: 16px
+  background-color: #222236
+  @include flex($align: center, $direction: column)
+  margin-top: 130px
+  
+.logo_type_footer
+  @include size($width: 150px, $height: 150px)
+  
+.footer__lists-info
+  @include flex($gap: 23px)
+  margin-top: 11px
 
+.social-lists_type_footer
+  margin-top: 15px
+  margin-left: 0
+
+.footer__list-info-link
+  color: $white
+  @include font($size: 16px, $height: 19px, $weight: $weight-regular)
+
+.footer__copyright
+  @include font($size: 16px, $height: 19px, $weight: $weight-regular)
+  color: $white
+  margin: 44px 0 0 0
+  padding-top: 16px
+  border-top: 1px solid $white
+  width: 100%
+  text-align: center
