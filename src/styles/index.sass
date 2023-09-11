@@ -316,6 +316,7 @@
 
 .featured__lists
   @include flex($justify: center, $gap: 77px)
+  flex-wrap: wrap
 
 .featured__list
   background-size: 100% 100%
@@ -358,7 +359,8 @@
 .marketplace__lists-btn
   padding-bottom: 28px
   border-bottom: 1px solid #fff
-  width: 945px
+  width: 100%
+  max-width: 945px
   @include flex($justify: center, $gap: 20px)
   
 
@@ -377,7 +379,8 @@
 .cards
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(267px, max-content))
-  width: 1144px
+  max-width: 1144px
+  width: 100%
   row-gap: 31px
   column-gap: 24px
   justify-content: center
@@ -521,3 +524,38 @@
   border-top: 1px solid $white
   width: 100%
   text-align: center
+
+
+
+@media screen and (max-width: 1391px)
+  .header__field
+    width: 230px
+
+  .description__cards-box
+    margin-left: 0
+
+@media screen and (max-width: 1189px)
+  .description__card-box
+    display: none
+
+  .featured
+    padding-top: 50px
+
+  .generate
+    flex-wrap: wrap
+
+  .generate__img
+    margin-top: 40px
+
+  .generate__container
+    margin-right: 0
+
+@media screen and (max-width: 1060px)
+  .hidden
+    display: none
+
+
+@media screen and (max-width: 945px)
+  .description
+    flex-wrap: wrap
+    justify-content: center
