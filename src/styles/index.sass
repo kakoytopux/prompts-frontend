@@ -47,17 +47,17 @@
 
 
 .header
-  @include size($height: 80px)
+  height: 80px
   border-bottom: 1px solid rgba(255, 255, 255, .4)
   padding-left: 51px
   padding-right: 37px
   @include flex($align: center, $justify: center)
+  position: relative
 
 .header__box-logo
   @include flex($align: center, $gap: 11px)
   padding-right: 51px
-  border-right: 1px solid rgba(255, 255, 255, .4)
-  @include size($height: 100%)
+  height: 100%
 
 .header__title-logo
   background-image: url(./images/title-logo.svg)
@@ -67,7 +67,8 @@
 .header__box-nav-search
   padding: 0 20px
   border-right: 1px solid rgba(255, 255, 255, .4)
-  @include size($height: 100%)
+  border-left: 1px solid rgba(255, 255, 255, .4)
+  height: 100%
   @include flex($align: center, $gap: 36px)
 
 .header__form-search
@@ -92,7 +93,7 @@
   top: 0
   right: 16px
   @include flex($align: center)
-  @include size($height: 100%)
+  height: 100%
 
 .header__submit
   background-image: url(./images/icons/search-icon.svg)
@@ -149,7 +150,7 @@
 .card
   background-color: $white
   max-width: 243px
-  @include size($height: 502px)
+  height: 502px
   padding: 12px 12px 17px 12px
   box-sizing: border-box
   text-align: center
@@ -222,6 +223,7 @@
 .description__box-btn
   margin-top: 49px
   @include flex($gap: 19px)
+  flex-wrap: wrap
 
 .description__btn
   @include size($width: 185px, $height: 49px)
@@ -358,9 +360,10 @@
 
 .marketplace__lists-btn
   padding-bottom: 28px
-  border-bottom: 1px solid #fff
+  border-bottom: 1px solid $white
   width: 100%
   max-width: 945px
+  flex-wrap: wrap
   @include flex($justify: center, $gap: 20px)
   
 
@@ -399,7 +402,7 @@
   @include flex($align: center, $gap: 6px)
   align-self: flex-end
   margin: 0
-  background-color: #fff
+  background-color: $white
   padding: 5px 9px
   border-radius: 5px
   @include font($size: 14px, $height: 17px, $weight: $weight-medium)
@@ -420,7 +423,7 @@
   @include font($size: 20px, $height: 23px, $weight: $weight-medium)
 
 .marketplace__browse-btn
-  border: 2px solid #fff
+  border: 2px solid $black
   border-radius: 100px
   background-color: #FAE620
   @include size($width: 251px, $height: 59px)
@@ -467,6 +470,7 @@
   color: $white
   max-width: 485px
   margin: 0
+  text-align: center
 
 .generate__desc
   @include font($size: 16px, $height: 20px, $weight: $weight-regular)
@@ -526,6 +530,14 @@
   text-align: center
 
 
+.header__burger-menu
+  background-image: url(./images/icons/burger-menu-icon.svg)
+  @include size($width: 50px, $height: 50px)
+  background-size: 100% 100%
+  display: none
+  
+
+
 
 @media screen and (max-width: 1391px)
   .header__field
@@ -554,8 +566,127 @@
   .hidden
     display: none
 
+  .header__close-btn
+    background-image: url(./images/icons/close-icon.svg)
+    @include size($width: 40px, $height: 40px)
+    background-size: 100% 100%
+    position: absolute
+    top: 20px
+    right: 20px
+
+  .social-lists_type_header
+    margin-left: 0
+    bottom: 50px
+
+  .visible-burger-menu
+    width: $width-menu
+    @include flex($justify: center)
+    position: fixed
+    right: 0
+    z-index: 7
+
+  
+  .header__nav-lists
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+  .header__burger-menu
+    display: block
+
+  .header__menu
+    @include size($width: $width-menu, $height: 100vh)
+    background-color: rgba(166, 171, 191, .9)
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 6
+
+  .header
+    justify-content: space-evenly
+    padding-right: 0
+    padding-left: 0
+
+  .header__box-nav-search
+    justify-content: center
+
+  .header__box-logo
+    padding-right: 0
+
+  .header__nav-list-link
+    color: $black
+    text-align: center
+    width: fit-content
+
+  .header__nav-list-link:last-of-type
+    justify-content: center
+    flex-direction: column
+
+  .header__navigation
+    top: 200px
+
 
 @media screen and (max-width: 945px)
+  .description__title
+    @include font($size: 33px, $height: 42px)
+
+  .description__subtitle
+    @include font($size: 16px, $height: 22px)
+    max-width: 300px
+
+  .description__card-list
+    @include size($width: 180px, $height: 170px)
+    
+
+@media screen and (max-width: 700px)    
   .description
     flex-wrap: wrap
     justify-content: center
+
+  .description__cards-box
+    margin-top: 50px
+    
+
+  .description__title
+    @include font($size: 40px, $height: 52px)
+
+  .description__subtitle
+    font-size: 25px
+    line-height: 32px
+    @include font($size: 25px, $height: 32px)
+    max-width: 400px
+
+
+@media screen and (max-width: 520px)
+  .description
+    padding-left: 0
+    padding-top: 40px
+    padding-bottom: 60px
+
+  .header__box-logo
+    flex-direction: column
+    justify-content: center
+
+  .logo_type_header
+    @include size($width: 30px, $height: 30px)
+
+  .header__title-logo
+    @include size($width: 50px, $height: 15px)
+    
+  .description__cards-box
+    gap: 15px
+
+  .header__field
+    width: 160px
+    @include font($size: 12px, $height: 17px)
+
+  .header__submit
+    @include size($width: 15px, $height: 15px)
+    
+    
+
+  .description__card-list
+    @include size($width: 140px, $height: 130px)
+
+  .description__name
+    @include font($size: 13px, $height: 19px)

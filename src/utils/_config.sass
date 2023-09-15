@@ -18,14 +18,14 @@
   @if $weight
     font-weight: $weight
 
-@mixin size($width: false, $height: false)
-  @if $width
-    width: $width
-  @if $height
-    height: $height
+@mixin size($width, $height)
+  width: $width
+  height: $height
 
 $white: #fff
 $black: #000
 
 $weight-regular: 400
 $weight-medium: 500
+
+$width-menu: 300px

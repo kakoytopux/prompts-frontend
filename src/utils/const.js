@@ -40,3 +40,9 @@ export const arrCardsMarketplace = [
     price: '$3.99',
   },
 ];
+
+export const burgerMenu = document.querySelector('.header__burger-menu');
+export const menu = document.querySelector('.header__menu');
+export const socialLists = document.querySelector('.social-lists_type_header');
+export const navigation = document.querySelector('.header__navigation');
+export const cross = document.querySelector('.header__close-btn');
