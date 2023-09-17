@@ -1,5 +1,5 @@
-import Card from "./Card";
-import AddCard from './AddCard';
+import Card from "../components/Card";
+import AddCard from '../components/AddCard';
 import {
   arrCardsMarketplace,
   burgerMenu,
@@ -8,6 +8,7 @@ import {
   menu,
   cross,
 } from '../utils/const';
+
 
 const createCard = item => {
   const card = new Card('#card', item);
@@ -19,6 +20,7 @@ const cardAdd = new AddCard('.cards', arrCardsMarketplace, { renderer: item => {
   cardAdd.addCard(createCard(item));
 }});
 cardAdd.setElementData();
+
 
 const closeEscBurgerMenu = evt => {
   if(evt.key === 'Escape') {

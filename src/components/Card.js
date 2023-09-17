@@ -4,6 +4,7 @@ export default class Card {
     this._name = data.name;
     this._tech = data.tech;
     this._price = data.price;
+    this._url = data.url;
   }
   _getTemplate() {
     const template = document.querySelector(this._template).content.cloneNode(true);
@@ -11,6 +12,7 @@ export default class Card {
   }
   createCard() {
     this._element = this._getTemplate();
+    this._element.setAttribute('style', `background-image: url(${this._url})`);
     this._element.querySelector('.cards__name').textContent = this._name;
     this._element.querySelector('.cards__technology').textContent = this._tech;
     this._element.querySelector('.cards__price').textContent = this._price;

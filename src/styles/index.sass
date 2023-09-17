@@ -259,19 +259,15 @@
   grid-template-rows: repeat(2, minmax(min-content, max-content))
 
 .description__card-list_type_dall-e
-  background-image: url()
   border-color: rgba(250, 230, 32, .4)
 
 .description__card-list_type_midjourney
-  background-image: url()
   border-color: rgba(76, 222, 85, .4)
 
 .description__card-list_type_gpt
-  background-image: url()
   border-color: rgba(243, 132, 138, .4)
 
 .description__card-list_type_stable-diff
-  background-image: url()
   border-color: rgba(11, 136, 217, .4)
 
 .description__technology
@@ -396,6 +392,7 @@
   padding: 14px 14px 17px
   box-sizing: border-box
   @include flex($direction: column, $justify: space-between)
+  background-size: 100% 100%
   
   
 .cards__technology
@@ -690,3 +687,6 @@
 
   .description__name
     @include font($size: 13px, $height: 19px)
+
+  .generate__img
+    width: 100%

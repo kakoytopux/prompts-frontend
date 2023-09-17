@@ -1,4 +1,4 @@
-const { series, task } = require('gulp');
+const { series } = require('gulp');
 const requireDir = require('require-dir');
 const tasks = requireDir('./tasks');
 
