@@ -1,0 +1,9 @@
+.description__name
+  @include font($size: 18px, $weight: $weight-medium, $height: 21px)
+  margin: 0
+  align-self: end
+  grid-row: 3 / 4
+
+@media screen and (max-width: 520px)
+  .description__name
+    @include font($size: 13px, $height: 19px)

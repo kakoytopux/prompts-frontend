@@ -1,692 +1,125 @@
 @import ../vendor/_fonts
 @import ../utils/_config
 
-.body
-  margin: 0
-  background-color: #0C0807
-  font-family: 'Finlandica', Helvetica, sans-serif
-  position: relative
+@import ../blocks/body/_body
+
+@import ../blocks/background/_background
+
+@import ../blocks/btn/_btn
+
+@import ../blocks/gpt/_gpt
+
+@import ../blocks/icon/_icon
+
+@import ../blocks/link/_link
+
+@import ../blocks/lists/_lists
+
+@import ../blocks/logo/_logo
+@import ../blocks/logo/_header/_logo_type_header
+@import ../blocks/logo/_footer/_logo_type_footer
+
+@import ../blocks/header/_header
+@import ../blocks/header/__box-logo/_header__box-logo
+@import ../blocks/header/__box-nav-search/_header__box-nav-search
+@import ../blocks/header/__box-submit/_header__box-submit
+@import ../blocks/header/__burger-menu/_header__burger-menu
+@import ../blocks/header/__field/_header__field
+@import ../blocks/header/__form-search/_header__form-search
+@import ../blocks/header/__nav-list-link/_header__nav-list-link
+@import ../blocks/header/__nav-lists/_header__nav-lists
+@import ../blocks/header/__submit/_header__submit
+@import ../blocks/header/__title-logo/_header__title-logo
+@import ../blocks/header/__menu/_header__menu
+@import ../blocks/header/__close-btn/_header__close-btn
+@import ../blocks/header/__navigation/_header__navigation
+
+@import ../blocks/card/_card
+@import ../blocks/card/__btn/_card__btn
+@import ../blocks/card/__img/_card__img
+@import ../blocks/card/__list/_card__list
+@import ../blocks/card/__lists/_card__lists
+@import ../blocks/card/__price/_card__price
+@import ../blocks/card/__time-name/_card__time-name
+@import ../blocks/card/__time-number/_card__time-number
+@import ../blocks/card/__title/_card__title
+
+@import ../blocks/cards/_cards
+@import ../blocks/cards/__box-text/_cards__box-text
+@import ../blocks/cards/__card/_cards__card
+@import ../blocks/cards/__name/_cards__name
+@import ../blocks/cards/__price/_cards__price
+@import ../blocks/cards/__technology/_cards__technology
+
+@import ../blocks/dall-e/_dall-e
+
+@import ../blocks/description/_description
+@import ../blocks/description/__box-btn/_description__box-btn
+@import ../blocks/description/__box-text/_description__box-text
+@import ../blocks/description/__btn/_description__btn
+@import ../blocks/description/__btn/_yellow/_description__btn_type_yellow
+@import ../blocks/description/__card-desc/_description__card-desc
+@import ../blocks/description/__card-list/_description__card-list
+@import ../blocks/description/__card-list/_dall-e/_description__card-list_type_dall-e
+@import ../blocks/description/__card-list/_gpt/_description__card-list_type_gpt
+@import ../blocks/description/__card-list/_midjourney/_description__card-list_type_midjourney
+@import ../blocks/description/__card-list/_stable-diff/_description__card-list_type_stable-diff
+@import ../blocks/description/__cards-box/_description__cards-box
+@import ../blocks/description/__cards-lists/_description__cards-lists
+@import ../blocks/description/__name/_description__name
+@import ../blocks/description/__subtitle/_description__subtitle
+@import ../blocks/description/__technology/_description__technology
+@import ../blocks/description/__title/_description__title
+@import ../blocks/description/__title-gradient/_description__title-gradient
+
+@import ../blocks/featured/_featured
+@import ../blocks/featured/__container/_featured__container
+@import ../blocks/featured/__list/_featured__list
+@import ../blocks/featured/__list/_atlantic/_featured__list_type_atlantic
+@import ../blocks/featured/__list/_fast/_featured__list_type_fast
+@import ../blocks/featured/__list/_financial/_featured__list_type_financial
+@import ../blocks/featured/__list/_theverge/_featured__list_type_theverge
+@import ../blocks/featured/__list/_wired/_featured__list_type_wired
+@import ../blocks/featured/__list/_wsj/_featured__list_type_wsj
+@import ../blocks/featured/__list/_yahoo/_featured__list_type_yahoo
+@import ../blocks/featured/__lists/_featured__lists
+@import ../blocks/featured/__title/_featured__title
+
+@import ../blocks/generate/_generate
+@import ../blocks/generate/__btn/_generate__btn
+@import ../blocks/generate/__container/_generate__container
+@import ../blocks/generate/__desc/_generate__desc
+@import ../blocks/generate/__img/_generate__img
+@import ../blocks/generate/__title/_generate__title
+
+@import ../blocks/footer/_footer
+@import ../blocks/footer/__copyright/_footer__copyright
+@import ../blocks/footer/__list-info-link/_footer__list-info-link
+@import ../blocks/footer/__lists-info/_footer__lists-info
+
+@import ../blocks/marketplace/_marketplace
+@import ../blocks/marketplace/__browse-btn/_marketplace__browse-btn
+@import ../blocks/marketplace/__btn/_marketplace__btn
+@import ../blocks/marketplace/__btn/_active/_marketplace__btn_active
+@import ../blocks/marketplace/__lists-btn/_marketplace__lists-btn
 
-.background
-  background-image: url('./images/background.jpg')
-  background-size: 100% 100%
-  @include size($width: 100%, $height: 100%)
-  position: absolute
-  top: 0
-  left: 0
-  z-index: -1
-  opacity: .2
+@import ../blocks/midjourney/_midjourney
 
+@import ../blocks/social-list-link/_social-list-link
+@import ../blocks/social-list-link/_facebook/_social-list-link_type_facebook
+@import ../blocks/social-list-link/_instagram/_social-list-link_type_instagram
+@import ../blocks/social-list-link/_twitter/_social-list-link_type_twitter
 
-.btn
-  padding: 0
-  border: 0
-  cursor: pointer
-  background-color: transparent
+@import ../blocks/social-lists/_social-lists
+@import ../blocks/social-lists/_header/_social-lists_type_header
+@import ../blocks/social-lists/_footer/_social-lists_type_footer
 
-.logo
-  background-image: url(./images/logo.svg)
-  background-size: 100% 100%
+@import ../blocks/stable-diff/_stable-diff
 
-.logo_type_header
-  @include size($width: 54px, $height: 54px)
+@import ../blocks/what-prompts/_what-prompts
+@import ../blocks/what-prompts/__desc/_what-prompts__desc
+@import ../blocks/what-prompts/__title/_what-prompts__title
 
-.link
-  text-decoration: none
+@import ../blocks/hidden/_hidden
 
-.lists
-  list-style: none
-  padding: 0
-  margin: 0
-
-.icon::before
-  content: ''
-  background-size: 100% 100%
-  @include size($width: 14px, $height: 14px)
-  display: block
-
-
-.header
-  height: 80px
-  border-bottom: 1px solid rgba(255, 255, 255, .4)
-  padding-left: 51px
-  padding-right: 37px
-  @include flex($align: center, $justify: center)
-  position: relative
-
-.header__box-logo
-  @include flex($align: center, $gap: 11px)
-  padding-right: 51px
-  height: 100%
-
-.header__title-logo
-  background-image: url(./images/title-logo.svg)
-  background-size: 100% 100%
-  @include size($width: 109px, $height: 26px)
-
-.header__box-nav-search
-  padding: 0 20px
-  border-right: 1px solid rgba(255, 255, 255, .4)
-  border-left: 1px solid rgba(255, 255, 255, .4)
-  height: 100%
-  @include flex($align: center, $gap: 36px)
-
-.header__form-search
-  position: relative
-
-.header__field
-  outline: 0
-  border: 1px solid rgba(255, 255, 255, .4)
-  @include size($width: 561px, $height: 43px)
-  box-sizing: border-box
-  background-color: transparent
-  border-radius: 100px
-  padding: 0 0 0 16px
-  @include font($size: 14px, $weight: $weight-regular, $height: 17px)
-  color: $white
-
-.header__field::placeholder
-  color: $white
-
-.header__box-submit
-  position: absolute
-  top: 0
-  right: 16px
-  @include flex($align: center)
-  height: 100%
-
-.header__submit
-  background-image: url(./images/icons/search-icon.svg)
-  background-size: 100% 100%
-  @include size($width: 20px, $height: 20px)
-
-.header__nav-lists
-  @include flex($gap: 23px)
-
-.header__nav-list-link
-  display: block
-  @include font($size: 16px, $weight: $weight-regular, $height: 19px)
-  color: $white
-
-.header__nav-list:last-of-type > .header__nav-list-link
-  @include flex($align: center, $gap: 3px)
-
-.header__nav-list:last-of-type > .header__nav-list-link::after
-  content: ''
-  background-image: url(./images/icons/arrow-icon.svg)
-  background-size: 100% 100%
-  @include size($width: 10px, $height: 10px)
-
-.social-lists
-  @include flex($gap: 25px)
-  margin-left: 37px
-
-.social-list-link
-  display: block
-  background-size: 100% 100%
-  @include size($width: 27px, $height: 27px)
-
-.social-list-link_type_facebook
-  background-image: url(./images/icons/facebook-icon.svg)
-
-.social-list-link_type_instagram
-  background-image: url(./images/icons/instagram-icon.svg)
-
-.social-list-link_type_twitter
-  background-image: url(./images/icons/twitter-icon.svg)
-
-
-
-.description
-  padding: 88px 0 99px 16px
-  @include flex
-
-.description__card-desc
-  color: $white
-  @include font($size: 20px, $weight: $weight-medium, $height: 25px)
-  text-align: center
-  margin: 0
-
-.card
-  background-color: $white
-  max-width: 243px
-  height: 502px
-  padding: 12px 12px 17px 12px
-  box-sizing: border-box
-  text-align: center
-  margin-top: 16px
-  @include flex($align: center, $direction: column)
-
-.card__img
-  @include size($width: 219px, $height: 215px)
-  display: block
-
-.card__title
-  max-width: 210px
-  @include font($size: 20px, $weight: $weight-medium, $height: 25px)
-  margin: 14px 0 0 0
-
-.card__price
-  @include font($size: 32px, $weight: $weight-medium, $height: 42px)
-  margin: 12px 0 0 0
-
-.card__btn
-  border: 2px solid $black
-  background-color: #F3848A
-  border-radius: 100px
-  @include size($width: 169px, $height: 45px)
-  @include font($size: 20px, $weight: $weight-medium, $height: 25px)
-  color: #222236
-  margin-top: 22px
-
-.card__lists
-  @include flex($align: flex-end, $justify: center, $gap: 12px)
-  flex-grow: 1
-
-.card__list
-  border: 1px solid rgba(0, 0, 0, .2)
-  border-radius: 6px
-  @include size($width: 51px, $height: 44px)
-  padding: 6px 0
-  box-sizing: border-box
-
-.card__time-number
-  @include font($size: 18px, $weight: $weight-medium, $height: 21px)
-  margin: 0
-
-.card__time-name
-  @include font($size: 10px, $weight: $weight-medium, $height: 12px)
-  margin: 0
-
-.description__box-text
-  margin-top: 57px
-  margin-left: 38px
-
-.description__title
-  @include font($size: 52px, $weight: $weight-medium, $height: 64px)
-  margin: 0
-  color: $white
-  max-width: 510px
-
-.description__title-gradient
-  -webkit-background-clip: text
-  background-clip: text
-  color: transparent
-  background-image: linear-gradient(120deg, #0B88D9 10%, #4CDE55 17%, #FAE620 25%, #F95A63 45%, #0B88D9, #4CDE55, #FAE620)
-
-.description__subtitle
-  @include font($size: 20px, $weight: $weight-regular, $height: 30px)
-  margin: 15px 0 0 0
-  max-width: 526px
-  color: $white
-
-.description__box-btn
-  margin-top: 49px
-  @include flex($gap: 19px)
-  flex-wrap: wrap
-
-.description__btn
-  @include size($width: 185px, $height: 49px)
-  border: 2px solid $white
-  border-radius: 100px
-  @include font($size: 20px, $weight: $weight-medium, $height: 25px)
-  color: $white
-
-.description__btn_type_yellow
-  background-color: #FAE620
-  color: $black
-
-.description__cards-box
-  @include flex($gap: 34px)
-  color: $white
-  margin-top: 29px
-  margin-left: 63px
-
-.description__cards-lists
-  @include flex($direction: column, $gap: 25px)
-
-.description__cards-lists:last-of-type
-  margin-top: 68px
-
-.description__card-list
-  @include size($width: 228px, $height: 196px)
-  border: 5px solid transparent
-  border-radius: 11px
-  box-sizing: border-box
-  padding: 8px 10px 10px
-  background-color: gray
-  display: grid
-  grid-template-rows: repeat(2, minmax(min-content, max-content))
-
-.description__card-list_type_dall-e
-  border-color: rgba(250, 230, 32, .4)
-
-.description__card-list_type_midjourney
-  border-color: rgba(76, 222, 85, .4)
-
-.description__card-list_type_gpt
-  border-color: rgba(243, 132, 138, .4)
-
-.description__card-list_type_stable-diff
-  border-color: rgba(11, 136, 217, .4)
-
-.description__technology
-  @include font($size: 14px, $weight: $weight-medium, $height: 16px)
-  background-color: rgba(0, 0, 0, .8)
-  margin: 0
-  padding: 4px 7px
-  justify-self: end
-  @include flex($align: center, $gap: 6px)
-  border-radius: 4px
-
-.dall-e::before
-  background-image: url(./images/icons/dall-e-icon.svg)
-
-.gpt::before
-  background-image: url(./images/icons/gpt-icon.svg)
-
-.midjourney::before
-  background-image: url(./images/icons/midjourney-icon.svg)
-
-.stable-diff::before
-  background-image: url(./images/icons/stable-diff-icon.svg)
-
-.description__name
-  @include font($size: 18px, $weight: $weight-medium, $height: 21px)
-  margin: 0
-  align-self: end
-  grid-row: 3 / 4
-
-
-
-.featured
-  padding-top: 86px
-
-.featured__title
-  @include font($size: 32px, $weight: $weight-medium, $height: 39px)
-  margin: 0
-  color: $white
-  text-align: center
-
-.featured__container
-  @include flex($direction: column, $gap: 30px)
-  margin-top: 37px
-
-.featured__lists
-  @include flex($justify: center, $gap: 77px)
-  flex-wrap: wrap
-
-.featured__list
-  background-size: 100% 100%
-  opacity: .7
-
-.featured__list_type_wsj
-  background-image: url(./images/featured-section/wsj-logo.svg)
-  @include size($width: 84px, $height: 41px)
-
-.featured__list_type_yahoo
-  background-image: url(./images/featured-section/yahoo-finance-logo.svg)
-  @include size($width: 291px, $height: 40px)
-
-.featured__list_type_financial
-  background-image: url(./images/featured-section/ft-logo.svg)
-  @include size($width: 393px, $height: 31px)
-
-.featured__list_type_atlantic
-  background-image: url(./images/featured-section/atlantic-logo.svg)
-  @include size($width: 85px, $height: 29px)
-
-.featured__list_type_fast
-  background-image: url(./images/featured-section/fast-company-logo.svg)
-  @include size($width: 202px, $height: 30px)
-
-.featured__list_type_wired
-  background-image: url(./images/featured-section/wired-logo.svg)
-  @include size($width: 150px, $height: 30px)
-
-.featured__list_type_theverge
-  background-image: url(./images/featured-section/verge-logo.svg)
-  @include size($width: 175px, $height: 30px)
-
-
-.marketplace
-  padding-top: 141px
-  @include flex($align: center, $direction: column)
-  
-
-.marketplace__lists-btn
-  padding-bottom: 28px
-  border-bottom: 1px solid $white
-  width: 100%
-  max-width: 945px
-  flex-wrap: wrap
-  @include flex($justify: center, $gap: 20px)
-  
-
-.marketplace__btn
-  @include size($width: 234px, $height: 63px)
-  color: $white
-  border: 1px solid rgba(255, 255, 255, .2)
-  @include font($size: 20px, $height: 25px, $weight: $weight-medium)
-  border-radius: 9px
-
-.marketplace__btn_active
-  background-color: #4CDE55
-  color: $black
-  
-
-.cards
-  display: grid
-  grid-template-columns: repeat(auto-fill, minmax(267px, max-content))
-  max-width: 1144px
-  width: 100%
-  row-gap: 31px
-  column-gap: 24px
-  justify-content: center
-  margin-top: 61px
-
-.cards__card
-  @include size($width: 267px, $height: 242px)
-  border: 2px solid rgba(255, 255, 255, .3)
-  border-radius: 8px
-  padding: 14px 14px 17px
-  box-sizing: border-box
-  @include flex($direction: column, $justify: space-between)
-  background-size: 100% 100%
-  
-  
-.cards__technology
-  @include flex($align: center, $gap: 6px)
-  align-self: flex-end
-  margin: 0
-  background-color: $white
-  padding: 5px 9px
-  border-radius: 5px
-  @include font($size: 14px, $height: 17px, $weight: $weight-medium)
-  
-.cards__box-text
-  @include flex($justify: space-between)
-  
-.cards__name
-  max-width: 150px
-  color: $white
-  margin: 0
-  @include font($size: 16px, $height: 19px, $weight: $weight-regular)
-  
-
-.cards__price
-  margin: 0
-  color: $white
-  @include font($size: 20px, $height: 23px, $weight: $weight-medium)
-
-.marketplace__browse-btn
-  border: 2px solid $black
-  border-radius: 100px
-  background-color: #FAE620
-  @include size($width: 251px, $height: 59px)
-  @include font($size: 20px, $height: 25px, $weight: $weight-medium)
-  color: #222236
-  margin-top: 73px
-
-
-
-.what-prompts
-  background-color: rgba(11, 136, 217, .5)
-  padding: 64px 0
-  @include flex($direction: column, $align: center)
-  margin-top: 136px
-
-.what-prompts__title
-  color: $white
-  @include font($size: 40px, $height: 49px, $weight: $weight-medium)
-  margin: 0
-
-.what-prompts__desc
-  margin: 11px 0 0 0
-  color: $white
-  @include font($size: 16px, $height: 20px, $weight: $weight-regular)
-  max-width: 743px
-  text-align: center
-
-.what-prompts__desc:first-of-type
-  margin-top: 21px
-
-
-
-.generate
-  margin-top: 175px
-  @include flex($justify: center)
-
-.generate__container
-  margin-right: 94px
-  @include flex($direction: column, $justify: center)
-  
-
-.generate__title
-  @include font($size: 40px, $height: 49px, $weight: $weight-regular)
-  color: $white
-  max-width: 485px
-  margin: 0
-  text-align: center
-
-.generate__desc
-  @include font($size: 16px, $height: 20px, $weight: $weight-regular)
-  color: $white
-  max-width: 485px
-  margin: 11px 0 0 0
-
-.generate__desc:first-of-type
-  margin-top: 21px
-
-.generate__btn
-  border: 2px solid $white
-  background-color: #FAE620
-  @include font($size: 20px, $height: 25px, $weight: $weight-medium)
-  color: #222236
-  margin-top: 32px
-  border-radius: 100px
-  @include size($width: 214px, $height: 49px)
-
-.generate__img
-  width: 555px
-  height: 342px
-  box-sizing: border-box
-  border: 8px solid rgba(255, 255, 255, .4)
-  border-radius: 5px
-  color: $white
-
-.footer
-  padding-top: 35px
-  padding-bottom: 16px
-  background-color: #222236
-  @include flex($align: center, $direction: column)
-  margin-top: 130px
-  
-.logo_type_footer
-  @include size($width: 150px, $height: 150px)
-  
-.footer__lists-info
-  @include flex($gap: 23px)
-  margin-top: 11px
-
-.social-lists_type_footer
-  margin-top: 15px
-  margin-left: 0
-
-.footer__list-info-link
-  color: $white
-  @include font($size: 16px, $height: 19px, $weight: $weight-regular)
-
-.footer__copyright
-  @include font($size: 16px, $height: 19px, $weight: $weight-regular)
-  color: $white
-  margin: 44px 0 0 0
-  padding-top: 16px
-  border-top: 1px solid $white
-  width: 100%
-  text-align: center
-
-
-.header__burger-menu
-  background-image: url(./images/icons/burger-menu-icon.svg)
-  @include size($width: 50px, $height: 50px)
-  background-size: 100% 100%
-  display: none
-  
-
-
-
-@media screen and (max-width: 1391px)
-  .header__field
-    width: 230px
-
-  .description__cards-box
-    margin-left: 0
-
-@media screen and (max-width: 1189px)
-  .description__card-box
-    display: none
-
-  .featured
-    padding-top: 50px
-
-  .generate
-    flex-wrap: wrap
-
-  .generate__img
-    margin-top: 40px
-
-  .generate__container
-    margin-right: 0
-
-@media screen and (max-width: 1060px)
-  .hidden
-    display: none
-
-  .header__close-btn
-    background-image: url(./images/icons/close-icon.svg)
-    @include size($width: 40px, $height: 40px)
-    background-size: 100% 100%
-    position: absolute
-    top: 20px
-    right: 20px
-
-  .social-lists_type_header
-    margin-left: 0
-    bottom: 50px
-
-  .visible-burger-menu
-    width: $width-menu
-    @include flex($justify: center)
-    position: fixed
-    right: 0
-    z-index: 7
-
-  
-  .header__nav-lists
-    flex-direction: column
-    align-items: center
-    width: 100%
-
-  .header__burger-menu
-    display: block
-
-  .header__menu
-    @include size($width: $width-menu, $height: 100vh)
-    background-color: rgba(166, 171, 191, .9)
-    position: fixed
-    top: 0
-    right: 0
-    z-index: 6
-
-  .header
-    justify-content: space-evenly
-    padding-right: 0
-    padding-left: 0
-
-  .header__box-nav-search
-    justify-content: center
-
-  .header__box-logo
-    padding-right: 0
-
-  .header__nav-list-link
-    color: $black
-    text-align: center
-    width: fit-content
-
-  .header__nav-list-link:last-of-type
-    justify-content: center
-    flex-direction: column
-
-  .header__navigation
-    top: 200px
-
-
-@media screen and (max-width: 945px)
-  .description__title
-    @include font($size: 33px, $height: 42px)
-
-  .description__subtitle
-    @include font($size: 16px, $height: 22px)
-    max-width: 300px
-
-  .description__card-list
-    @include size($width: 180px, $height: 170px)
-    
-
-@media screen and (max-width: 700px)    
-  .description
-    flex-wrap: wrap
-    justify-content: center
-
-  .description__cards-box
-    margin-top: 50px
-    
-
-  .description__title
-    @include font($size: 40px, $height: 52px)
-
-  .description__subtitle
-    font-size: 25px
-    line-height: 32px
-    @include font($size: 25px, $height: 32px)
-    max-width: 400px
-
-
-@media screen and (max-width: 520px)
-  .description
-    padding-left: 0
-    padding-top: 40px
-    padding-bottom: 60px
-
-  .header__box-logo
-    flex-direction: column
-    justify-content: center
-
-  .logo_type_header
-    @include size($width: 30px, $height: 30px)
-
-  .header__title-logo
-    @include size($width: 50px, $height: 15px)
-    
-  .description__cards-box
-    gap: 15px
-
-  .header__field
-    width: 160px
-    @include font($size: 12px, $height: 17px)
-
-  .header__submit
-    @include size($width: 15px, $height: 15px)
-    
-    
-
-  .description__card-list
-    @include size($width: 140px, $height: 130px)
-
-  .description__name
-    @include font($size: 13px, $height: 19px)
-
-  .generate__img
-    width: 100%
+@import ../blocks/visible-burger-menu/_visible-burger-menu

@@ -1,0 +1,22 @@
+.header__field
+  outline: 0
+  border: 1px solid rgba(255, 255, 255, .4)
+  @include size($width: 561px, $height: 43px)
+  box-sizing: border-box
+  background-color: transparent
+  border-radius: 100px
+  padding: 0 0 0 16px
+  @include font($size: 14px, $weight: $weight-regular, $height: 17px)
+  color: $white
+
+.header__field::placeholder
+  color: $white
+
+@media screen and (max-width: 1391px)
+  .header__field
+    width: 230px
+
+@media screen and (max-width: 520px)
+  .header__field
+    width: 160px
+    @include font($size: 12px, $height: 17px)

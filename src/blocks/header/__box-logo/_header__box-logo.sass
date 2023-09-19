@@ -1,0 +1,13 @@
+.header__box-logo
+  @include flex($align: center, $gap: 11px)
+  padding-right: 51px
+  height: 100%
+
+@media screen and (max-width: 1060px)
+  .header__box-logo
+    padding-right: 0
+
+@media screen and (max-width: 520px)
+  .header__box-logo
+    flex-direction: column
+    justify-content: center

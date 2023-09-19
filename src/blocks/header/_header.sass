@@ -1,0 +1,13 @@
+.header
+  height: 80px
+  border-bottom: 1px solid rgba(255, 255, 255, .4)
+  padding-left: 51px
+  padding-right: 37px
+  @include flex($align: center, $justify: center)
+  position: relative
+
+@media screen and (max-width: 1060px)
+  .header
+    justify-content: space-evenly
+    padding-right: 0
+    padding-left: 0

@@ -1,0 +1,17 @@
+.description__subtitle
+  @include font($size: 20px, $weight: $weight-regular, $height: 30px)
+  margin: 15px 0 0 0
+  max-width: 526px
+  color: $white
+
+@media screen and (max-width: 945px)
+  .description__subtitle
+    @include font($size: 16px, $height: 22px)
+    max-width: 300px
+
+@media screen and (max-width: 700px)
+  .description__subtitle
+    font-size: 25px
+    line-height: 32px
+    @include font($size: 25px, $height: 32px)
+    max-width: 400px

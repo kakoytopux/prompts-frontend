@@ -1,0 +1,23 @@
+.header__nav-list-link
+  display: block
+  @include font($size: 16px, $weight: $weight-regular, $height: 19px)
+  color: $white
+
+.header__nav-list:last-of-type > .header__nav-list-link
+  @include flex($align: center, $gap: 3px)
+
+.header__nav-list:last-of-type > .header__nav-list-link::after
+  content: ''
+  background-image: url(./images/icons/arrow-icon.svg)
+  background-size: 100% 100%
+  @include size($width: 10px, $height: 10px)
+
+@media screen and (max-width: 1060px)
+  .header__nav-list-link
+    color: $black
+    text-align: center
+    width: fit-content
+
+  .header__nav-list-link:last-of-type
+    justify-content: center
+    flex-direction: column
